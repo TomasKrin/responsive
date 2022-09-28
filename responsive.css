@@ -1,0 +1,77 @@
+body {
+  margin: 20px;
+}
+
+h1,
+h2,
+li {
+  color: gray;
+  white-space: nowrap;
+}
+
+img {
+  width: 10vw;
+  height: 10vw;
+  display: flex;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  border: 1px solid lightgray;
+  padding: 20px;
+  box-shadow: 3vw 3vw 5vw 0.1vw lightgray;
+}
+.main .weather-now {
+  display: flex;
+}
+.main .weather-now .weather-now-temperature {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.main .weather-now .weather-now-temperature p {
+  margin: 0;
+  color: gray;
+  white-space: nowrap;
+}
+.main .weather-now .weather-now-temperature .weather {
+  display: flex;
+  align-items: baseline;
+}
+.main .weather-now .weather-now-temperature .weather .temperature {
+  font-size: 50px;
+  align-self: flex-start;
+}
+.main .weather-now ul {
+  flex: 1;
+  list-style: none;
+  margin-top: 60px;
+}
+.main .upcoming-weather {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.main .upcoming-weather p {
+  margin: 0 20px;
+  color: gray;
+}
+.main .upcoming-weather h2 {
+  width: 150px;
+}
+@media only screen and (max-width: 1280px) {
+  .main .upcoming-weather {
+    grid-template-columns: 1fr;
+    align-items: baseline;
+    justify-content: baseline;
+  }
+  .main .upcoming-weather .day {
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid gray;
+  }
+  .main .upcoming-weather .day p {
+    align-self: center;
+  }
+}/*# sourceMappingURL=responsive.css.map */

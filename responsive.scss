@@ -1,0 +1,88 @@
+body {
+    margin: 20px;
+}
+
+h1,
+h2,
+li {
+    color: gray;
+    white-space: nowrap;
+}
+
+img {
+    width: 10vw;
+    height: 10vw;
+    display: flex;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    border: 1px solid lightgray;
+    padding: 20px;
+    box-shadow: 3vw 3vw 5vw 0.1vw lightgray;
+
+    .weather-now {
+        display: flex;
+
+        .weather-now-temperature {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            p {
+                margin: 0;
+                color: gray;
+                white-space: nowrap;
+            }
+
+            .weather {
+                display: flex;
+                align-items: baseline;
+
+                .temperature {
+                    font-size: 50px;
+                    align-self: flex-start;
+                }
+            }
+        }
+
+        ul {
+            flex: 1;
+            list-style: none;
+            margin-top: 60px;
+        }
+    }
+
+    .upcoming-weather {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+
+        p {
+            margin: 0 20px;
+            color: gray;
+        }
+
+        h2 {
+            width: 150px;
+        }
+
+
+        @media only screen and(max-width:1280px) {
+            grid-template-columns: 1fr;
+            align-items: baseline;
+            justify-content: baseline;
+
+            .day {
+                display: flex;
+                justify-content: space-evenly;
+                border-top: 1px solid gray;
+
+                p {
+                    align-self: center;
+                }
+            }
+        }
+    }
+}
